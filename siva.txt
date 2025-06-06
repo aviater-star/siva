@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venkata Siva Gopi Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0d0d0d;
+        color: #fff;
+        display: flex;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      aside {
+        width: 220px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border-right: 2px solid rgba(255, 255, 255, 0.08);
+        padding: 30px 20px;
+        position: fixed;
+        height: 100vh;
+      }
+      aside h1 {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: #00f7ff;
+      }
+      nav a {
+        display: block;
+        margin-bottom: 20px;
+        color: #ccc;
+        text-decoration: none;
+        transition: 0.3s;
+        font-weight: 500;
+      }
+      nav a:hover {
+        color: #00f7ff;
+        padding-left: 5px;
+      }
+      main {
+        margin-left: 240px;
+        padding: 40px;
+        width: 100%;
+      }
+      section {
+        margin-bottom: 80px;
+        border-radius: 20px;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+        border: 1px solid rgba(0, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+      }
+      h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #00f7ff;
+      }
+      p {
+        line-height: 1.7;
+        color: #ddd;
+      }
+      .project,
+      .skill {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+      }
+      .contact-form button {
+        padding: 12px 25px;
+        background: #00f7ff;
+        color: #000;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .contact-form button:hover {
+        background: #00d0d9;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #777;
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-out;
+      }
+      .fade-up.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          flex-direction: column;
+        }
+        aside {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        main {
+          margin-left: 0;
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <h1>Venkata Siva Gopi</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="home" class="fade-up">
+        <h2>Welcome</h2>
+        <p>
+          Hello! I'm Venkata Siva Gopi, a CSE (AI & ML) student from VVIT,
+          passionate about creating intelligent, responsive, and futuristic web
+          applications powered by modern technologies.
+        </p>
+      </section>
+
+      <section id="about" class="fade-up">
+        <h2>About Me</h2>
+        <p>
+          I’m currently pursuing Computer Science Engineering with a
+          specialization in Artificial Intelligence and Machine Learning. I
+          enjoy exploring neural networks, image processing, and building
+          interactive web projects using only HTML, CSS, and JavaScript.
+        </p>
+      </section>
+
+      <section id="projects" class="fade-up">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Digit Recognizer</h3>
+          <p>
+            A Python project using CNNs to recognize handwritten digits with
+            over 98% accuracy.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Sketchify</h3>
+          <p>
+            Transforms normal photos into sketch art using OpenCV and NumPy.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Code Assistant Bot</h3>
+          <p>
+            AI-powered chatbot that helps users debug and understand simple
+            Python code snippets.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="fade-up">
+        <h2>Skills</h2>
+        <div class="skill">HTML, CSS, JavaScript</div>
+        <div class="skill">Python, Java, C</div>
+        <div class="skill">TensorFlow, OpenCV, Numpy</div>
+        <div class="skill">Git, Firebase, MySQL</div>
+      </section>
+
+      <section id="contact" class="fade-up">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="5" placeholder="Your Message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+
+      <footer>
+        © 2025 Venkata Siva Gopi | Designed with ♥ using HTML/CSS/JS
+      </footer>
+    </main>
+
+    <script>
+      // Scroll-based fade-up animation
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
